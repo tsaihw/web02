@@ -3,52 +3,125 @@
  * Code licensed under the Apache License v2.0.
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
+/*!
+* h1=網頁標題
+* h2=文章標題
+* h3=網頁次標題
+* h5=navi
+* lead=內文
+*/
 
-body,
-html {
-    width: 100%;
-    height: 100%;
+
+
+@font-face {
+  font-family: 'cwTeXMing';
+  font-style: normal;
+  font-weight: 500;
+  src: url(//fonts.gstatic.com/ea/cwtexming/v3/cwTeXMing-zhonly.eot);
+  src: url(//fonts.gstatic.com/ea/cwtexming/v3/cwTeXMing-zhonly.eot?#iefix) format('embedded-opentype'),
+       url(//fonts.gstatic.com/ea/cwtexming/v3/cwTeXMing-zhonly.woff2) format('woff2'),
+       url(//fonts.gstatic.com/ea/cwtexming/v3/cwTeXMing-zhonly.woff) format('woff'),
+       url(//fonts.gstatic.com/ea/cwtexming/v3/cwTeXMing-zhonly.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'cwTeXHei';
+  font-style: normal;
+  font-weight: 500;
+  src: url(//fonts.gstatic.com/ea/cwtexhei/v3/cwTeXHei-zhonly.eot);
+  src: url(//fonts.gstatic.com/ea/cwtexhei/v3/cwTeXHei-zhonly.eot?#iefix) format('embedded-opentype'),
+       url(//fonts.gstatic.com/ea/cwtexhei/v3/cwTeXHei-zhonly.woff2) format('woff2'),
+       url(//fonts.gstatic.com/ea/cwtexhei/v3/cwTeXHei-zhonly.woff) format('woff'),
+       url(//fonts.gstatic.com/ea/cwtexhei/v3/cwTeXHei-zhonly.ttf) format('truetype');
 }
 
 body,
+{
+    font-family: "Lato","cwTeXMing","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    font-size:24px;
+}
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Lato","cwTeXMing","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
 }
 
+/*網站顏色*/
+body,
+html {
+    width: 100%;
+    height: 100%;
+    background-color:#FFF6F2;
+}
+
+/* tab color */
+.nav-tabs>li>a {
+  background-color: #EAE6D9;
+  border-color: #E3DfD4;
+  color:#333333;
+}
+
+/* active tab color */
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
+  color: #333333;
+  background-color: #FFFCF4;
+  border: 1px solid #FFFCF4;
+}
+
+/* hover tab color */
+.nav-tabs>li>a:hover {
+  border-color: #FFFCF4;
+  background-color: #E3DfD4;
+}
+
 .topnav {
-    font-size: 14px; 
+    font-weight: 700;
 }
 
 .lead {
-    font-size: 18px;
-    font-weight: 400;
+  font:18px "Microsoft JhengHei",  sans-serif;
+  font-weight: 400;
+  line-height:1.5;
+  letter-spacing: 1.3px;
+  margin:0 0 20px;
 }
+.page-header {
+  padding:5 20 20 20;
+  margin-left:0
+  text-align: Left;
+  color:#333333;
+  background-color: #FFF6F2;
+}/*網站標題*/
+
+.col-md-12 {
+    background-color: #FFF6F2;
+}/*新加的, 讓顏色填滿*/
 
 .intro-header {
-    padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
-    padding-bottom: 50px;
-    text-align: center;
+    padding-top: 10px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
+    padding-bottom: 10px;
+    text-align: Left;
     color: #f8f8f8;
-    background: url(../img/intro-bg.jpg) no-repeat center center;
+    background: url(../img/train_xs_by_melconcept-d62uedu.jpg) no-repeat center center;
     background-size: cover;
+
 }
 
 .intro-message {
     position: relative;
-    padding-top: 20%;
-    padding-bottom: 20%;
+    padding-top: 15%;
+    padding-bottom: 10%;
 }
 
 .intro-message > h1 {
+    font:"cwTeXMing" serif;
     margin: 0;
     text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
-    font-size: 5em;
+    font-size: 3em;
 }
 
 .intro-divider {
@@ -58,28 +131,39 @@ h6 {
 }
 
 .intro-message > h3 {
+    font:"cwTeXMing" serif;
     text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
 }
+
 
 @media(max-width:767px) {
     .intro-message {
         padding-bottom: 15%;
     }
-
     .intro-message > h1 {
-        font-size: 3em;
+        font-size: 2.0em;
     }
 
+    .intro-message > h3 {
+        font-size: 1.6em;
+    }
+    h2{
+        font-size: 1.6em;
+    }
+    .lead {
+    font:1.2em "Microsoft JhengHei",  sans-serif;
+    line-height:1.5;
+    letter-spacing: 1.3px;
+    margin:0 0 20px;
+    }
     ul.intro-social-buttons > li {
         display: block;
         margin-bottom: 20px;
         padding: 0;
     }
-
     ul.intro-social-buttons > li:last-child {
         margin-bottom: 0;
     }
-
     .intro-divider {
         width: 100%;
     }
@@ -93,8 +177,8 @@ h6 {
 }
 
 .content-section-a {
-    padding: 50px 0;
-    background-color: #f8f8f8;
+    padding: 20px 0;
+
 }
 
 .content-section-b {
@@ -116,7 +200,7 @@ h6 {
 .banner {
     padding: 100px 0;
     color: #f8f8f8;
-    background: url(../img/banner-bg.jpg) no-repeat center center;
+    background: url(../img/train_xs_by_melconcept-d62uedu.jpg) no-repeat center center;
     background-size: cover;
 }
 
@@ -162,7 +246,7 @@ h6 {
 
 footer {
     padding: 50px 0;
-    background-color: #f8f8f8;
+    background-color: #FFF6F2;
 }
 
 p.copyright {
