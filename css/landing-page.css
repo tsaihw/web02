@@ -103,11 +103,11 @@ html {
 
 .intro-header {
     padding-top: 10px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
-    padding-bottom: 10px;
+    padding-bottom: 5px;
     text-align: Left;
     color: #f8f8f8;
-    background: url(../img/train_xs_by_melconcept-d62uedu.jpg) no-repeat center center;
-    background-size: cover;
+    /*background: url(../img/train_xs_by_melconcept-d62uedu.jpg) no-repeat center center;
+    background-size: cover;*/
 
 }
 
@@ -135,7 +135,7 @@ html {
     text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
 }
 
-
+/*小裝置設定：*/
 @media(max-width:767px) {
     .intro-message {
         padding-bottom: 15%;
@@ -182,7 +182,7 @@ html {
 }
 
 .content-section-b {
-    padding: 50px 0;
+    padding: 20px 0;
     border-top: 1px solid #e7e7e7;
     border-bottom: 1px solid #e7e7e7;
 }
